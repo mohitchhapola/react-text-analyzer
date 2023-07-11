@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.hamburger{
+  transition: all 0.25s;
+  /* position: relative; */
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom{
+  top: 0;
+  /* left: 0; */
+  width: 24px;
+  height: 2px;
+  transform: rotate(0);
+  transition: all 0.5s ;
+}
+
+.hamburger-middle{
+  transform: translateY(2px);
+}
+
+.hamburger-bottom{
+  transform: translateY(4px);
+}
+
+
+.open{
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top{
+  transform: rotate(45deg) translateY( 10px) translate(6px);
+}
+
+.open .hamburger-bottom{
+  transform: rotate(-45deg) translateY( 1.75px) translate(-6px);
+}
+
+.open .hamburger-middle{
+  display: none;
+}
+
+/* @media only screen and (min-width: 600px) {
+  .hamburger {
+    margin-left:350px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .hamburger {
+    margin-left:150px;
+  }
+} */
